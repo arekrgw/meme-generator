@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: #222;
+    font-weight: normal;
+}
+
+.container h1{
+    font-weight: normal;
+    color: #36abff;
+    text-align: center;
+    font-size: 52px;
+    padding: 40px;
+}
+@font-face{
+        font-family: Impact;
+        src: url('impact.ttf');
+}
+.container{
+    width: 40%;
+    margin: 0 auto 50px auto;
+}
+#app{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Impact;
+}
+label{
+    color: #2e92db;
+    display: block;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 5px 0;
+}
+textarea{
+    display: block;
+    width: 100%;
+    font-size: 40px;
+    background: #333;
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid #36abff;
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+    padding: 5px;
+    
+}
+textarea:focus{
+    outline: none;
+}
+.steering{
+    line-height: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.steering i{
+    display: inline-block;
+    background: none;
+    color: #2e92db;
+    font-size: 30px;
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 15px
+
+}
+.steering button:focus{
+    outline: none;
+}
+.font-info{
+    text-align: center;
+    color: #2e92db;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    width: 100%;
+    display: block;
+    
+}
+input[type=text]{
+    width: 70px;
+    text-align: center;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: #2e92db;
+    
+}
+input[type=text]:focus{
+    outline: none;
+}
+canvas{
+    font-family: Impact;
+    text-align: center;
+}
+
+#fileI{
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+#fileLabel{
+    display: block;
+    width: 160px;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 10px;
+    font-weight: bold;
+    border: 1px solid #2e92db;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border-radius: 3px;
+    margin: 15px auto;
+}
+#fileLabel:hover{
+    background: #2e92db;
+    color: white;
+
+}
+#saveImg{
+    display: block;
+    margin: 35px auto 15px auto;
+    width: 160px;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 10px;
+    font-weight: bold;
+    border: 1px solid #2e92db;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border-radius: 3px;
+    color: #2e92db;
+    background: none;
+}
+#saveImg:hover{
+    background: #2e92db;
+    color: white;
+}
+@media only screen and (max-width: 760px){
+    .container{
+        width: 90%;
+    }
+}

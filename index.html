@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Somsiedzki Generator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://use.fontawesome.com/adad629476.js"></script>
+    </head>
+    <body>
+       <div class="container">
+       
+       <h1>Generator Memów</h1>
+       
+        <div id="app">
+            
+            <input id="fileI" type="file" @change="readUserImage">
+            <label for="fileI" id="fileLabel" v-html="fileSet"></label>
+         
+          <div class="inputs">        
+            <label for="t1">Górny tekst obrazka:</label>
+            <textarea id="t1" v-model="text.top"></textarea>
+            <label for="t2">Dolny tekst obrazka:</label>
+            <textarea id="t2" v-model="text.bott"></textarea>
+            
+            <div class="font-size">
+                <div class="steering">
+                   <i class="fa fa-minus-circle" aria-hidden="true" v-on:click="text.fontSize--"></i> 
+                    <input v-model="text.fontSize" type="text">
+                    <i class="fa fa-plus-circle" aria-hidden="true" v-on:click="text.fontSize++"></i> 
+                </div>
+                <span class="font-info">Wielkość czcionki<br>(możesz wpisać)</span>  
+            </div>            
+           </div>
+              
+            <input id="saveImg" type="button" v-on:click="downloadImg" value="Zapisz obraz">
+            
+            <canvas id="meme" width="500" height="500" v-draw-all=text></canvas>
+            
+    
+        </div>
+        </div>
+        
+        
+        <script src="vue.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
